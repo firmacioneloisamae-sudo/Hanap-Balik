@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="csrf-token" content="{{ csrf_token }}">
+  <title>HanapBalik — Lost and Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+      </symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>
+      </symbol>
+      <symbol id="lock" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </symbol>
+      <symbol id="users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="4"/>
+        <path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-5-6.7"/>
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3z"/></symbol>
+      <symbol id="file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/><path d="M14 2v6h6"/>
+      </symbol>
+      <symbol id="link" viewBox="0 0 24 24">
+        <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>
+      </symbol>
+      <symbol id="msg" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </symbol>
+      <symbol id="cog" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>
+      </symbol>
+      <symbol id="out" viewBox="0 0 24 24">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+      <symbol id="eye" viewBox="0 0 24 24">
+        <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+      <symbol id="box" viewBox="0 0 24 24">
+        <path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/>
+      </symbol>
+      <symbol id="grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1"/>
+        <rect x="14" y="3" width="7" height="7" rx="1"/>
+        <rect x="3" y="14" width="7" height="7" rx="1"/>
+        <rect x="14" y="14" width="7" height="7" rx="1"/>
+      </symbol>
+      <symbol id="up" viewBox="0 0 24 24"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- HOME -->
+  <div class="page" id="p-home">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links">
+          <a class="h" href="#how">How it works</a><a class="h" href="#safety">Safety</a>
+          <a class="h" href="#about">About us</a><a href="#login">Log in</a>
+          <a href="#signup" class="btn pri" style="padding:8px 16px;min-height:38px;color:#fff">Sign up</a>
+        </nav>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <h1>A simpler way back to what matters.</h1>
+          <p class="lead">
+            Report lost items, share found belongings, and connect the right people through one
+            secure community hub.
+          </p>
+          <div class="cta">
+            <a class="btn pri" href="#report" data-report-type="Lost"><svg class="i"><use href="#plus"/></svg>Report lost item</a>
+            <a class="btn acc" href="#report" data-report-type="Found"><svg class="i"><use href="#plus"/></svg>Report found item</a>
+          </div>
+          <form class="search" id="home-search" role="search">
+            <svg class="i" style="align-self:center;margin-left:8px;color:var(--mu)"><use href="#search"/></svg>
+            <input id="home-keyword" aria-label="Search items" placeholder="Search “black wallet” or “main library”">
+            <button class="btn pri">Search items</button>
+          </form>
+        </div>
+        <div class="card trail" aria-label="How an item gets home">
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#file"/></svg></span>
+            <div>
+              <b>Item report submitted</b>
+              <div class="sm mu">Details are saved securely</div>
+            </div>
+            <span class="badge b-lost" style="margin-left:auto">Reported</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#link"/></svg></span>
+            <div>
+              <b>Possible match identified</b>
+              <div class="sm mu">Similar reports are compared</div>
+            </div>
+            <span class="badge b-match" style="margin-left:auto">Match</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#shield"/></svg></span>
+            <div>
+              <b>Ownership verified</b>
+              <div class="sm mu">Evidence reviewed by an administrator</div>
+            </div>
+            <span class="badge b-pend" style="margin-left:auto">Review</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#check"/></svg></span>
+            <div>
+              <b>Item returned to its owner</b>
+              <div class="sm mu">The report is marked complete</div>
+            </div>
+            <span class="badge b-ret" style="margin-left:auto">Complete</span>
+          </div>
+        </div>
+      </div>
+      <section class="s">
+        <h2>Start with what you need</h2>
+        <p class="mu">
+          Everything important is one click away, whether you’re looking for an item or helping to
+          return one.
+        </p>
+        <br>
+        <div class="g3">
+          <a href="#report" class="card" data-report-type="Lost">
+            <div class="ic"><svg class="i"><use href="#search"/></svg></div>
+            <h3>Report a lost item</h3>
+            <p class="mu sm">Add details that help others recognize what you’re missing.</p>
+            <b class="sm" style="color:var(--teal)">Create a lost report</b>
+          </a>
+          <a href="#report" class="card" data-report-type="Found">
+            <div class="ic"><svg class="i"><use href="#box"/></svg></div>
+            <h3>Report a found item</h3>
+            <p class="mu sm">Submit what you found so it can be returned to its owner.</p>
+            <b class="sm" style="color:var(--teal)">Create a found report</b>
+          </a>
+          <a href="#search" class="card">
+            <div class="ic"><svg class="i"><use href="#grid"/></svg></div>
+            <h3>Search the database</h3>
+            <p class="mu sm">Browse listed items to find what you lost.</p>
+            <b class="sm" style="color:var(--teal)">Browse items</b>
+          </a>
+        </div>
+      </section>
+      <section class="s" id="how">
+        <h2>How HanapBalik works</h2>
+        <p class="mu">A clear process keeps every report organized and every claim accountable.</p>
+        <br>
+        <div class="g4">
+          <div class="step">
+            <b>1. Report</b>
+            <span class="mu sm">Submit the item details, date, location, and a helpful description.</span>
+          </div>
+          <div class="step">
+            <b>2. Match</b>
+            <span class="mu sm">Compare reports to identify possible lost and found matches.</span>
+          </div>
+          <div class="step">
+            <b>3. Verify</b>
+            <span class="mu sm">Provide ownership evidence for an administrator to review securely.</span>
+          </div>
+          <div class="step">
+            <b>4. Return</b>
+            <span class="mu sm">Approved claims move to release, then the item is marked returned.</span>
+          </div>
+        </div>
+      </section>
+      <section class="s">
+        <div class="bar" style="margin-bottom:16px">
+          <div>
+            <h2>Recently reported items</h2>
+            <p class="mu" style="margin:4px 0 0">Private details remain protected.</p>
+          </div>
+          <a class="btn out sp" href="#search">View all items</a>
+        </div>
+        <div class="g3 items"></div>
+      </section>
+      <section class="s" id="safety">
+        <div class="trust">
+          <div>
+            <h2>Built for trust, not guesswork.</h2>
+            <p style="opacity:.85">
+              Accounts are verified, claims are reviewed by administrators, and item statuses stay
+              visible from report to return.
+            </p>
+          </div>
+          <ul>
+            <li>
+              <svg class="i"><use href="#lock"/></svg>
+              <div>
+                <b>Secure accounts</b><br>
+                <span style="opacity:.8" class="sm">Your ID is used only to verify your account and is never shown publicly.</span>
+              </div>
+            </li>
+            <li>
+              <svg class="i"><use href="#shield"/></svg>
+              <div>
+                <b>Reviewed claims</b><br>
+                <span style="opacity:.8" class="sm">Ownership is verified before any item is released.</span>
+              </div>
+            </li>
+            <li>
+              <svg class="i"><use href="#users"/></svg>
+              <div>
+                <b>Community first</b><br>
+                <span style="opacity:.8" class="sm">Clear statuses so everyone knows what happens next.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer id="about">
+      <div class="wrap">
+        <div>
+          <b class="logo" style="display:block;margin-bottom:6px">HanapBalik</b>© 2026 HanapBalik.
+          Lost and found, made simple.
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <a href="#search">Lost &amp; found</a>          <a href="#safety">Privacy &amp; safety</a><a href="#how">Help</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="page" id="p-login">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links"><a href="#login">Log in</a><a href="#signup">Sign up</a></nav>
+      </div>
+    </header>
+    <div class="auth">
+      <div class="side">
+        <h2>Keep the search moving. Bring it home.</h2>
+        <p>
+          Log in to report an item, follow possible matches, and keep track of your claims in one
+          secure place.
+        </p>
+      </div>
+      <div class="form">
+        <form class="card" id="lf" novalidate>
+          <h2>Welcome back</h2>
+          <p class="mu">Log in to continue your journey.</p>
+          <br>
+          <div class="f">
+            <label for="le">Email address</label>
+            <input id="le" class="in" type="email" placeholder="you@example.com" autocomplete="email">
+            <div class="er">Enter a valid email address.</div>
+          </div>
+          <div class="f">
+            <label for="lp">Password</label>
+            <input id="lp" class="in" type="password" autocomplete="current-password">
+            <button type="button" class="eye" data-input="lp" aria-label="Show password"><svg class="i"><use href="#eye"/></svg></button>
+            <div class="er">Password must be at least 8 characters.</div>
+          </div>
+          <div class="bar" style="margin-bottom:16px">
+            <label class="chk" style="margin:0"><input type="checkbox">Remember me</label>
+            <span class="sp sm mu">Contact your administrator if you need help signing in.</span>
+          </div>
+          <button class="btn pri" style="width:100%" id="lb">Log in</button>
+          <p class="mu sm" style="text-align:center">
+            New here?
+            <a href="#signup" style="color:var(--teal);font-weight:700">Create an account</a>
+          </p>
+          <p class="mu sm" style="text-align:center;margin:0">
+            Your information is only used to verify accounts and support safe item returns.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div class="page" id="p-signup">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links"><a href="#login">Log in</a><a href="#signup">Sign up</a></nav>
+      </div>
+    </header>
+    <div class="auth">
+      <div class="side">
+        <h2>Keep the search moving. Bring it home.</h2>
+        <p>
+          Verified accounts keep the community safe. Your ID is stored privately and only reviewed
+          by administrators.
+        </p>
+      </div>
+      <div class="form">
+        <form class="card" id="sf" novalidate enctype="multipart/form-data">
+          <h2>Create an account</h2>
+          <p class="mu" style="margin-bottom:0">Sign up to continue your journey.</p>
+          <div class="sec">Personal information</div>
+          <div class="two">
+            <div class="f">
+              <label for="sn">Full name</label><input id="sn" class="in" autocomplete="name">
+              <div class="er">Enter your full name.</div>
+            </div>
+            <div class="f">
+              <label for="sc">Contact number</label>
+              <input id="sc" class="in" type="tel" placeholder="09XX XXX XXXX">
+              <div class="er">Enter a valid contact number.</div>
+            </div>
+          </div>
+          <div class="f">
+            <label for="se">Email address</label><input id="se" class="in" type="email">
+            <div class="er">Enter a valid email address.</div>
+          </div>
+          <div class="sec">Account security</div>
+          <div class="two">
+            <div class="f">
+              <label for="sp">Password</label><input id="sp" class="in" type="password">
+              <div class="er">Use at least 8 characters.</div>
+            </div>
+            <div class="f">
+              <label for="sq">Confirm password</label><input id="sq" class="in" type="password">
+              <div class="er">Passwords do not match.</div>
+            </div>
+          </div>
+          <div class="sec">Identity verification</div>
+          <div class="two">
+            <div class="f">
+              <label for="st">Valid ID type</label>
+              <select id="st" class="in">
+                <option>Driver’s license</option>
+                <option>National ID</option>
+                <option>Passport</option>
+                <option>School ID</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="si">ID number</label><input id="si" class="in">
+              <div class="er">Enter your ID number.</div>
+            </div>
+          </div>
+          <div class="f">
+            <label>Upload valid ID</label>
+            <label class="drop" for="sf1"><svg class="i"><use href="#up"/></svg><br><span id="fn">Choose a file (JPG, PNG or PDF)</span></label>
+            <input id="sf1" type="file" hidden accept="image/jpeg,image/png,application/pdf">
+            <div class="sm mu" style="margin-top:6px">
+              Stored privately. Never shown to other users.
+            </div>
+          </div>
+          <label class="chk"><input type="checkbox" id="sa">I agree to the Terms of Service and Privacy Policy.</label>
+          <button class="btn pri" style="width:100%">Create account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP SHELL -->
+  <div class="page" id="p-app">
+    <div class="app">
+      <aside class="nav" id="nav"></aside>
+      <main class="main">
+        <div class="bar">
+        <button class="btn out mb" id="menu-toggle" type="button" aria-label="Open menu"><svg class="i"><use href="#menu"/></svg></button>
+          <div>
+            <h1 id="ttl" style="font-size:1.7rem"></h1>
+            <div class="mu sm" id="sub"></div>
+          </div>
+          <div class="sp" id="qa"></div>
+        </div>
+        <div class="v" id="v-dashboard">
+          <div class="stats">
+            <div class="card stat"><b id="ds-reports">0</b><span>Total reports</span></div>
+            <div class="card stat"><b id="ds-lost">0</b><span>Lost items</span></div>
+            <div class="card stat"><b id="ds-found">0</b><span>Found items</span></div>
+            <div class="card stat"><b id="ds-claims">0</b><span>Active claims</span></div>
+            <div class="card stat"><b id="ds-matches">0</b><span>Possible matches</span></div>
+          </div>
+          <div class="two2">
+            <div class="card">
+              <h3 style="margin-bottom:12px">Your latest reports</h3>
+              <div class="tw">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Possible match</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody id="dashboard-reports"></tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Recent activity</h3>
+              <div id="dashboard-activity" class="empty">Your reports and claim updates will appear here.</div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-report">
+          <form class="card" id="rf" novalidate enctype="multipart/form-data" style="max-width:760px">
+            <div class="two">
+              <div class="f">
+                <label for="rt">Report type</label>
+                <select id="rt" class="in">
+                  <option value="Lost">I lost an item</option>
+                  <option value="Found">I found an item</option>
+                </select>
+              </div>
+              <div class="f">
+                <label for="rc">Category</label>
+                <select id="rc" class="in">
+                  <option>Wallets &amp; bags</option>
+                  <option>Keys</option>
+                  <option>Electronics</option>
+                  <option>Documents &amp; IDs</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="f">
+              <label for="rn">Item name</label><input id="rn" class="in">
+              <div class="er">Give the item a short name.</div>
+            </div>
+            <div class="f">
+              <label for="rd">Detailed description</label>
+              <textarea id="rd" class="in" rows="3"></textarea>
+              <div class="er">Describe the item so others can recognize it.</div>
+            </div>
+            <div class="two">
+              <div class="f">
+                <label for="rdt">Date lost or found</label><input id="rdt" type="date" class="in">
+              </div>
+              <div class="f">
+                <label for="rl">Location</label>
+                <input id="rl" class="in" placeholder="Near the main library">
+                <div class="er">Add where it happened.</div>
+              </div>
+            </div>
+            <div class="f">
+              <label for="ri">Additional identifying details</label>
+              <input id="ri" class="in" placeholder="Scratches, stickers, serial number">
+              <div class="sm mu" style="margin-top:4px">
+                Private details are visible only to administrators.
+              </div>
+            </div>
+            <div class="f">
+              <label>Item photo</label>
+              <label class="drop" for="rp"><svg class="i"><use href="#up"/></svg><br><span id="report-photo-name">Upload a photo</span></label>
+              <input id="rp" type="file" hidden accept="image/jpeg,image/png,image/webp">
+            </div>
+            <button class="btn pri">Submit report</button>
+          </form>
+        </div>
+        <div class="v" id="v-search">
+          <div class="filters">
+            <input class="in" aria-label="Keyword" placeholder="Search keyword" id="kw">
+            <select class="in" aria-label="Status" id="fs">
+              <option value="">Lost &amp; found</option>
+              <option>Lost</option>
+              <option>Found</option>
+            </select>
+            <select class="in" aria-label="Category" id="fc">
+              <option value="">All categories</option>
+              <option>Wallets &amp; bags</option>
+              <option>Keys</option>
+              <option>Electronics</option>
+              <option>Documents &amp; IDs</option>
+              <option>Other</option>
+            </select>
+            <input class="in" type="date" aria-label="Date" id="fd">
+          </div>
+          <div class="g3 items" id="sr"></div>
+        </div>
+        <div class="v" id="v-reports">
+          <div class="g3 items" id="my-reports"></div>
+        </div>
+        <div class="v" id="v-matches">
+          <div class="g3 items" id="possible-matches"></div>
+        </div>
+        <div class="v" id="v-claims">
+          <div class="two2">
+            <div class="card">
+              <form id="claim-form" enctype="multipart/form-data">
+                <h3>Submit an ownership claim</h3>
+                <div class="f" style="margin-top:16px">
+                  <label for="claim-item">Found item</label>
+                  <select id="claim-item" name="item_id" class="in" required></select>
+                  <div class="er">Choose an available found item.</div>
+                </div>
+                <div class="f">
+                  <label for="ce">Ownership evidence</label>
+                  <textarea id="ce" name="evidence" class="in" rows="3" maxlength="3000" placeholder="Describe contents, marks, or when you last had it" required></textarea>
+                  <div class="er">Add evidence so an administrator can verify your claim.</div>
+                </div>
+                <div class="f">
+                  <label class="drop" for="cf"><svg class="i"><use href="#up"/></svg><br><span id="claim-file-name">Attach a photo or receipt (private)</span></label>
+                  <input id="cf" name="evidence_file" type="file" hidden accept="image/jpeg,image/png,application/pdf">
+                </div>
+                <button class="btn pri" type="submit">Submit claim</button>
+              </form>
+            </div>
+            <div class="card">
+              <h3>Your claims</h3>
+              <p class="mu sm">Evidence is visible only to you and administrators.</p>
+              <div id="claim-list"></div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-settings">
+          <div class="two2">
+            <form class="card" id="account-form">
+              <h3>Account details</h3>
+              <div class="f" style="margin-top:16px">
+                <label for="account-name">Full name</label>
+                <input id="account-name" class="in" autocomplete="name" required>
+              </div>
+              <div class="f">
+                <label for="account-contact">Contact number</label>
+                <input id="account-contact" class="in" type="tel" autocomplete="tel" required>
+              </div>
+              <div class="f">
+                <label>Email address</label>
+                <input id="account-email" class="in" type="email" disabled>
+              </div>
+              <button class="btn pri" type="submit">Save changes</button>
+            </form>
+            <form class="card" id="password-form">
+              <h3>Change password</h3>
+              <div class="f" style="margin-top:16px">
+                <label for="current-password">Current password</label>
+                <input id="current-password" class="in" type="password" autocomplete="current-password" required>
+              </div>
+              <div class="f">
+                <label for="new-password">New password</label>
+                <input id="new-password" class="in" type="password" autocomplete="new-password" minlength="8" required>
+              </div>
+              <div class="f">
+                <label for="confirm-password">Confirm new password</label>
+                <input id="confirm-password" class="in" type="password" autocomplete="new-password" required>
+              </div>
+              <button class="btn pri" type="submit">Update password</button>
+            </form>
+          </div>
+        </div>
+        <div class="v" id="v-admin">
+          <div class="stats">
+            <div class="card stat"><b id="as-items">0</b><span>Total items</span></div>
+            <div class="card stat"><b id="as-users">0</b><span>Users</span></div>
+            <div class="card stat"><b id="as-claims">0</b><span>Claims to review</span></div>
+            <div class="card stat"><b id="as-matched">0</b><span>Matched</span></div>
+            <div class="card stat"><b id="as-returned">0</b><span>Returned</span></div>
+          </div>
+          <div class="card">
+            <div class="bar" style="margin-bottom:12px">
+              <h3>Claim verification</h3>
+              <input class="in sp" style="max-width:240px" id="aq" placeholder="Search claims" aria-label="Search claims">
+              <select class="in" style="max-width:160px" id="claim-status-filter" aria-label="Filter status">
+                <option value="">All statuses</option>
+                <option>Pending</option>
+                <option>Approved</option>
+                <option>Rejected</option>
+                <option>Returned</option>
+              </select>
+            </div>
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Claim</th>
+                    <th>Item</th>
+                    <th>Claimant</th>
+                    <th>Status</th>
+                    <th>Evidence</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="at"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card" style="margin-top:20px">
+            <h3>Manage reports</h3>
+            <div class="tw">
+              <table>
+                <thead><tr><th>Item</th><th>Type</th><th>Reporter</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody id="admin-items"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card" style="margin-top:20px">
+            <h3>Account verification</h3>
+            <div class="tw">
+              <table>
+                <thead><tr><th>Name</th><th>Email</th><th>Status</th><th>Action</th></tr></thead>
+                <tbody id="admin-users"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <dialog id="dg">
+    <h3 id="dt"></h3>
+    <p class="mu" id="dp"></p>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button class="btn out" id="close-dialog" type="button">Cancel</button>
+      <button class="btn pri" id="dok">Confirm</button>
+    </div>
+  </dialog>
+  <dialog id="edit-dg">
+    <form id="edit-item-form">
+      <h3>Edit report</h3>
+      <input id="edit-item-id" type="hidden">
+      <div class="f" style="margin-top:16px"><label for="edit-title">Item name</label><input id="edit-title" class="in" maxlength="150" required></div>
+      <div class="two">
+        <div class="f"><label for="edit-category">Category</label><select id="edit-category" class="in"><option>Wallets &amp; bags</option><option>Keys</option><option>Electronics</option><option>Documents &amp; IDs</option><option>Other</option></select></div>
+        <div class="f"><label for="edit-type">Report type</label><select id="edit-type" class="in"><option>Lost</option><option>Found</option></select></div>
+      </div>
+      <div class="f"><label for="edit-description">Description</label><textarea id="edit-description" class="in" rows="3" required></textarea></div>
+      <div class="two">
+        <div class="f"><label for="edit-date">Date lost or found</label><input id="edit-date" type="date" class="in" required></div>
+        <div class="f"><label for="edit-location">Location</label><input id="edit-location" class="in" maxlength="200" required></div>
+      </div>
+      <div class="f"><label for="edit-identifying">Private identifying details</label><input id="edit-identifying" class="in" maxlength="3000"></div>
+      <div style="display:flex;gap:10px;justify-content:flex-end">
+        <button class="btn out" type="button" id="cancel-edit">Cancel</button>
+        <button class="btn pri" type="submit">Save changes</button>
+      </div>
+    </form>
+  </dialog>
+  <dialog id="identity-dg">
+    <h3 id="identity-title">Account identity</h3>
+    <div id="identity-details" class="sm"></div>
+    <a id="identity-download" class="btn out" href="#" style="margin-top:16px">Download ID document</a>
+    <div style="display:flex;justify-content:flex-end;margin-top:16px">
+      <button class="btn out" id="close-identity" type="button">Close</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="/static/script.js" defer></script>
+</body>
+</html>
