@@ -12,7 +12,10 @@ PostgreSQL support for hosted deployments.
 
 ## Run locally (Windows PowerShell)
 
+From the cloned repository's root, change into the project folder first:
+
 ```powershell
+Set-Location .\HanapBalik-backUp
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt

@@ -1,0 +1,2212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HanapBalik — Lost and Found</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/>
+      </symbol>
+      <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>
+      </symbol>
+      <symbol id="lock" viewBox="0 0 24 24">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </symbol>
+      <symbol id="users" viewBox="0 0 24 24">
+        <circle cx="9" cy="8" r="4"/>
+        <path d="M2 21a7 7 0 0 1 14 0M16 4a4 4 0 0 1 0 8M22 21a7 7 0 0 0-5-6.7"/>
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24"><path d="m3 11 9-8 9 8v10H3z"/></symbol>
+      <symbol id="file" viewBox="0 0 24 24">
+        <path d="M14 2H6a2 2 0 0 0-2 2v16h16V8z"/><path d="M14 2v6h6"/>
+      </symbol>
+      <symbol id="link" viewBox="0 0 24 24">
+        <path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/>
+      </symbol>
+      <symbol id="msg" viewBox="0 0 24 24">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+      </symbol>
+      <symbol id="cog" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/>
+      </symbol>
+      <symbol id="out" viewBox="0 0 24 24">
+        <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/>
+      </symbol>
+      <symbol id="menu" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></symbol>
+      <symbol id="eye" viewBox="0 0 24 24">
+        <path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></symbol>
+      <symbol id="box" viewBox="0 0 24 24">
+        <path d="M21 8 12 3 3 8v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/>
+      </symbol>
+      <symbol id="grid" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7" rx="1"/>
+        <rect x="14" y="3" width="7" height="7" rx="1"/>
+        <rect x="3" y="14" width="7" height="7" rx="1"/>
+        <rect x="14" y="14" width="7" height="7" rx="1"/>
+      </symbol>
+      <symbol id="up" viewBox="0 0 24 24"><path d="M12 16V4M6 10l6-6 6 6M4 20h16"/></symbol>
+    </defs>
+  </svg>
+
+  <!-- HOME -->
+  <div class="page" id="p-home">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links">
+          <a class="h" href="#how">How it works</a><a class="h" href="#safety">Safety</a>
+          <a class="h" href="#about">About us</a><a href="#login">Log in</a>
+          <a href="#signup" class="btn pri" style="padding:8px 16px;min-height:38px;color:#fff">Sign up</a>
+        </nav>
+      </div>
+    </header>
+    <div class="wrap">
+      <div class="hero">
+        <div>
+          <h1>A simpler way back to what matters.</h1>
+          <p class="lead">
+            Report lost items, share found belongings, and connect the right people through one
+            secure community hub.
+          </p>
+          <div class="cta">
+            <a class="btn pri" href="#report"><svg class="i"><use href="#plus"/></svg>Report lost item</a>
+            <a class="btn acc" href="#report"><svg class="i"><use href="#plus"/></svg>Report found item</a>
+          </div>
+          <form class="search" onsubmit="event.preventDefault();go('search')" role="search">
+            <svg class="i" style="align-self:center;margin-left:8px;color:var(--mu)"><use href="#search"/></svg>
+            <input aria-label="Search items" placeholder="Search “black wallet” or “main library”">
+            <button class="btn pri">Search items</button>
+          </form>
+        </div>
+        <div class="card trail" aria-label="How an item gets home">
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#file"/></svg></span>
+            <div>
+              <b>Black wallet reported</b>
+              <div class="sm mu">Near library · Sept 10</div>
+            </div>
+            <span class="badge b-lost" style="margin-left:auto">Lost</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#link"/></svg></span>
+            <div>
+              <b>Possible match found</b>
+              <div class="sm mu">Details compared automatically</div>
+            </div>
+            <span class="badge b-match" style="margin-left:auto">Matched</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#shield"/></svg></span>
+            <div>
+              <b>Ownership verified</b>
+              <div class="sm mu">Reviewed by an administrator</div>
+            </div>
+            <span class="badge b-pend" style="margin-left:auto">Pending</span>
+          </div>
+          <div class="row">
+            <span class="dot"><svg class="i"><use href="#check"/></svg></span>
+            <div>
+              <b>Returned to owner</b>
+              <div class="sm mu">Report closed</div>
+            </div>
+            <span class="badge b-ret" style="margin-left:auto">Returned</span>
+          </div>
+        </div>
+      </div>
+      <section class="s">
+        <h2>Start with what you need</h2>
+        <p class="mu">
+          Everything important is one click away, whether you’re looking for an item or helping to
+          return one.
+        </p>
+        <br>
+        <div class="g3">
+          <a href="#report" class="card">
+            <div class="ic"><svg class="i"><use href="#search"/></svg></div>
+            <h3>Report a lost item</h3>
+            <p class="mu sm">Add details that help others recognize what you’re missing.</p>
+            <b class="sm" style="color:var(--teal)">Create a lost report</b>
+          </a>
+          <a href="#report" class="card">
+            <div class="ic"><svg class="i"><use href="#box"/></svg></div>
+            <h3>Report a found item</h3>
+            <p class="mu sm">Submit what you found so it can be returned to its owner.</p>
+            <b class="sm" style="color:var(--teal)">Create a found report</b>
+          </a>
+          <a href="#search" class="card">
+            <div class="ic"><svg class="i"><use href="#grid"/></svg></div>
+            <h3>Search the database</h3>
+            <p class="mu sm">Browse listed items to find what you lost.</p>
+            <b class="sm" style="color:var(--teal)">Browse items</b>
+          </a>
+        </div>
+      </section>
+      <section class="s" id="how">
+        <h2>How HanapBalik works</h2>
+        <p class="mu">A clear process keeps every report organized and every claim accountable.</p>
+        <br>
+        <div class="g4">
+          <div class="step">
+            <b>1. Report</b>
+            <span class="mu sm">Submit the item details, date, location, and a helpful description.</span>
+          </div>
+          <div class="step">
+            <b>2. Match</b>
+            <span class="mu sm">Compare reports to identify possible lost and found matches.</span>
+          </div>
+          <div class="step">
+            <b>3. Verify</b>
+            <span class="mu sm">Provide ownership evidence for an administrator to review securely.</span>
+          </div>
+          <div class="step">
+            <b>4. Return</b>
+            <span class="mu sm">Approved claims move to release, then the item is marked returned.</span>
+          </div>
+        </div>
+      </section>
+      <section class="s">
+        <div class="bar" style="margin-bottom:16px">
+          <div>
+            <h2>Recently reported items</h2>
+            <p class="mu" style="margin:4px 0 0">Private details remain protected.</p>
+          </div>
+          <a class="btn out sp" href="#search">View all items</a>
+        </div>
+        <div class="g3 items"></div>
+      </section>
+      <section class="s" id="safety">
+        <div class="trust">
+          <div>
+            <h2>Built for trust, not guesswork.</h2>
+            <p style="opacity:.85">
+              Accounts are verified, claims are reviewed by administrators, and item statuses stay
+              visible from report to return.
+            </p>
+          </div>
+          <ul>
+            <li>
+              <svg class="i"><use href="#lock"/></svg>
+              <div>
+                <b>Secure accounts</b><br>
+                <span style="opacity:.8" class="sm">Your ID is used only to verify your account and is never shown publicly.</span>
+              </div>
+            </li>
+            <li>
+              <svg class="i"><use href="#shield"/></svg>
+              <div>
+                <b>Reviewed claims</b><br>
+                <span style="opacity:.8" class="sm">Ownership is verified before any item is released.</span>
+              </div>
+            </li>
+            <li>
+              <svg class="i"><use href="#users"/></svg>
+              <div>
+                <b>Community first</b><br>
+                <span style="opacity:.8" class="sm">Clear statuses so everyone knows what happens next.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <footer id="about">
+      <div class="wrap">
+        <div>
+          <b class="logo" style="display:block;margin-bottom:6px">HanapBalik</b>© 2026 HanapBalik.
+          Lost and found, made simple.
+        </div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap">
+          <a href="#search">Lost &amp; found</a><a href="#home">Privacy</a><a href="#home">Help</a>
+          <a href="#home">Contact</a><a href="#admin">Admin</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- LOGIN -->
+  <div class="page" id="p-login">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links"><a href="#login">Log in</a><a href="#signup">Sign up</a></nav>
+      </div>
+    </header>
+    <div class="auth">
+      <div class="side">
+        <h2>Keep the search moving. Bring it home.</h2>
+        <p>
+          Log in to report an item, follow possible matches, and keep track of your claims in one
+          secure place.
+        </p>
+      </div>
+      <div class="form">
+        <form class="card" id="lf" novalidate>
+          <h2>Welcome back</h2>
+          <p class="mu">Log in to continue your journey.</p>
+          <br>
+          <div class="f">
+            <label for="le">Email address</label>
+            <input id="le" class="in" type="email" placeholder="you@example.com" autocomplete="email">
+            <div class="er">Enter a valid email address.</div>
+          </div>
+          <div class="f">
+            <label for="lp">Password</label>
+            <input id="lp" class="in" type="password" autocomplete="current-password">
+            <button type="button" class="eye" aria-label="Show password" onclick="eye('lp')"><svg class="i"><use href="#eye"/></svg></button>
+            <div class="er">Password must be at least 8 characters.</div>
+          </div>
+          <div class="bar" style="margin-bottom:16px">
+            <label class="chk" style="margin:0"><input type="checkbox">Remember me</label>
+            <a class="sp sm" style="color:var(--teal);font-weight:600" href="#login">Forgot password?</a>
+          </div>
+          <button class="btn pri" style="width:100%" id="lb">Log in</button>
+          <p class="mu sm" style="text-align:center">
+            New here?
+            <a href="#signup" style="color:var(--teal);font-weight:700">Create an account</a>
+          </p>
+          <p class="mu sm" style="text-align:center;margin:0">
+            Your information is only used to verify accounts and support safe item returns.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNUP -->
+  <div class="page" id="p-signup">
+    <header class="top">
+      <div class="wrap">
+        <a href="#home" class="logo"><span class="mark"><svg class="i"><use href="#search"/></svg></span>HanapBalik</a>
+        <nav class="links"><a href="#login">Log in</a><a href="#signup">Sign up</a></nav>
+      </div>
+    </header>
+    <div class="auth">
+      <div class="side">
+        <h2>Keep the search moving. Bring it home.</h2>
+        <p>
+          Verified accounts keep the community safe. Your ID is stored privately and only reviewed
+          by administrators.
+        </p>
+      </div>
+      <div class="form">
+        <form class="card" id="sf" novalidate>
+          <h2>Create an account</h2>
+          <p class="mu" style="margin-bottom:0">Sign up to continue your journey.</p>
+          <div class="sec">Personal information</div>
+          <div class="two">
+            <div class="f">
+              <label for="sn">Full name</label><input id="sn" class="in" autocomplete="name">
+              <div class="er">Enter your full name.</div>
+            </div>
+            <div class="f">
+              <label for="sc">Contact number</label>
+              <input id="sc" class="in" type="tel" placeholder="09XX XXX XXXX">
+              <div class="er">Enter a valid contact number.</div>
+            </div>
+          </div>
+          <div class="f">
+            <label for="se">Email address</label><input id="se" class="in" type="email">
+            <div class="er">Enter a valid email address.</div>
+          </div>
+          <div class="sec">Account security</div>
+          <div class="two">
+            <div class="f">
+              <label for="sp">Password</label><input id="sp" class="in" type="password">
+              <div class="er">Use at least 8 characters.</div>
+            </div>
+            <div class="f">
+              <label for="sq">Confirm password</label><input id="sq" class="in" type="password">
+              <div class="er">Passwords do not match.</div>
+            </div>
+          </div>
+          <div class="sec">Identity verification</div>
+          <div class="two">
+            <div class="f">
+              <label for="st">Valid ID type</label>
+              <select id="st" class="in">
+                <option>Driver’s license</option>
+                <option>National ID</option>
+                <option>Passport</option>
+                <option>School ID</option>
+              </select>
+            </div>
+            <div class="f">
+              <label for="si">ID number</label><input id="si" class="in">
+              <div class="er">Enter your ID number.</div>
+            </div>
+          </div>
+          <div class="f">
+            <label>Upload valid ID</label>
+            <label class="drop" for="sf1"><svg class="i"><use href="#up"/></svg><br><span id="fn">Choose a file (JPG, PNG or PDF)</span></label>
+            <input id="sf1" type="file" hidden accept="image/*,.pdf" onchange="fn.textContent=this.files[0]?.name||'Choose a file'">
+            <div class="sm mu" style="margin-top:6px">
+              Stored privately. Never shown to other users.
+            </div>
+          </div>
+          <label class="chk"><input type="checkbox" id="sa">I agree to the Terms of Service and Privacy Policy.</label>
+          <button class="btn pri" style="width:100%">Create account</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- APP SHELL -->
+  <div class="page" id="p-app">
+    <div class="app">
+      <aside class="nav" id="nav"></aside>
+      <main class="main">
+        <div class="bar">
+          <button class="btn out mb" aria-label="Open menu" onclick="nav.classList.toggle('open')"><svg class="i"><use href="#menu"/></svg></button>
+          <div>
+            <h1 id="ttl" style="font-size:1.7rem"></h1>
+            <div class="mu sm" id="sub"></div>
+          </div>
+          <div class="sp" id="qa"></div>
+        </div>
+        <div class="v" id="v-dashboard">
+          <div class="stats">
+            <div class="card stat"><b>12</b><span>Total reports</span></div>
+            <div class="card stat"><b>7</b><span>Lost items</span></div>
+            <div class="card stat"><b>5</b><span>Found items</span></div>
+            <div class="card stat"><b>2</b><span>Active claims</span></div>
+            <div class="card stat"><b>3</b><span>Possible matches</span></div>
+          </div>
+          <div class="two2">
+            <div class="card">
+              <h3 style="margin-bottom:12px">Your latest reports</h3>
+              <div class="tw">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Item</th>
+                      <th>Type</th>
+                      <th>Status</th>
+                      <th>Possible match</th>
+                      <th>Date</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Black wallet</td>
+                      <td><span class="badge b-lost">Lost</span></td>
+                      <td><span class="badge b-match">Matched</span></td>
+                      <td>High confidence</td>
+                      <td>Sept 10</td>
+                    </tr>
+                    <tr>
+                      <td>Blue key chain</td>
+                      <td><span class="badge b-found">Found</span></td>
+                      <td><span class="badge b-pend">Pending verification</span></td>
+                      <td>None yet</td>
+                      <td>Sept 8</td>
+                    </tr>
+                    <tr>
+                      <td>Wireless headphones</td>
+                      <td><span class="badge b-lost">Lost</span></td>
+                      <td><span class="badge b-ret">Returned</span></td>
+                      <td>Confirmed</td>
+                      <td>Aug 30</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card">
+              <h3>Recent activity</h3>
+              <div class="act">
+                <span class="dot"><svg class="i"><use href="#link"/></svg></span>
+                <div>
+                  A high-confidence match was found for your black wallet.
+                  <div class="mu sm">2 hours ago</div>
+                </div>
+              </div>
+              <div class="act">
+                <span class="dot"><svg class="i"><use href="#shield"/></svg></span>
+                <div>
+                  Your claim is waiting for administrator review.
+                  <div class="mu sm">Yesterday</div>
+                </div>
+              </div>
+              <div class="act">
+                <span class="dot"><svg class="i"><use href="#check"/></svg></span>
+                <div>
+                  Wireless headphones marked as returned.
+                  <div class="mu sm">Aug 30</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-report">
+          <form class="card" id="rf" novalidate style="max-width:760px">
+            <div class="two">
+              <div class="f">
+                <label for="rt">Report type</label>
+                <select id="rt" class="in">
+                  <option>I lost an item</option>
+                  <option>I found an item</option>
+                </select>
+              </div>
+              <div class="f">
+                <label for="rc">Category</label>
+                <select id="rc" class="in">
+                  <option>Wallets &amp; bags</option>
+                  <option>Keys</option>
+                  <option>Electronics</option>
+                  <option>Documents &amp; IDs</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="f">
+              <label for="rn">Item name</label><input id="rn" class="in">
+              <div class="er">Give the item a short name.</div>
+            </div>
+            <div class="f">
+              <label for="rd">Detailed description</label>
+              <textarea id="rd" class="in" rows="3"></textarea>
+              <div class="er">Describe the item so others can recognize it.</div>
+            </div>
+            <div class="two">
+              <div class="f">
+                <label for="rdt">Date lost or found</label><input id="rdt" type="date" class="in">
+              </div>
+              <div class="f">
+                <label for="rl">Location</label>
+                <input id="rl" class="in" placeholder="Near the main library">
+                <div class="er">Add where it happened.</div>
+              </div>
+            </div>
+            <div class="f">
+              <label for="ri">Additional identifying details</label>
+              <input id="ri" class="in" placeholder="Scratches, stickers, serial number">
+              <div class="sm mu" style="margin-top:4px">
+                Private details are visible only to administrators.
+              </div>
+            </div>
+            <div class="f">
+              <label>Item photo</label>
+              <label class="drop" for="rp"><svg class="i"><use href="#up"/></svg><br>Upload a photo</label>
+              <input id="rp" type="file" hidden accept="image/*">
+            </div>
+            <button class="btn pri">Submit report</button>
+          </form>
+        </div>
+        <div class="v" id="v-search">
+          <div class="filters">
+            <input class="in" aria-label="Keyword" placeholder="Search keyword" id="kw" oninput="items()">
+            <select class="in" aria-label="Status" id="fs" onchange="items()">
+              <option value="">Lost &amp; found</option>
+              <option>Lost</option>
+              <option>Found</option>
+            </select>
+            <select class="in" aria-label="Category">
+              <option>All categories</option>
+              <option>Wallets</option>
+              <option>Keys</option>
+              <option>Electronics</option>
+            </select>
+            <input class="in" type="date" aria-label="Date">
+          </div>
+          <div class="g3 items" id="sr"></div>
+        </div>
+        <div class="v" id="v-claims">
+          <div class="two2">
+            <div class="card">
+              <div class="thumb"><svg class="i"><use href="#box"/></svg></div>
+              <h3>Black wallet</h3>
+              <div class="meta">
+                <span><svg class="i"><use href="#pin"/></svg>Near library</span>
+                <span><svg class="i"><use href="#cal"/></svg>Sept 10, 2026</span>
+                <span class="badge b-found">Found</span>
+              </div>
+              <div class="f">
+                <label for="ce">Ownership evidence</label>
+                <textarea id="ce" class="in" rows="3" placeholder="Describe contents, marks, or when you last had it"></textarea>
+                <div class="er">Add evidence so an administrator can verify your claim.</div>
+              </div>
+              <label class="drop" for="cf"><svg class="i"><use href="#up"/></svg><br>Attach photos or receipts (private)</label>
+              <input id="cf" type="file" hidden multiple><br>
+              <button class="btn pri" onclick="dlg('Submit this claim?','Administrators will review your evidence. You can’t edit it after submitting.',()=>toast('Claim submitted'))">Submit claim</button>
+            </div>
+            <div class="card">
+              <h3>Claim progress</h3>
+              <div class="prog">
+                <div class="d">Submitted</div>
+                <div class="d">Under review</div>
+                <div>Approved</div>
+                <div>Returned</div>
+              </div>
+              <p class="mu sm">
+                Your claim is being reviewed. Evidence is visible only to you and administrators.
+              </p>
+              <div class="empty" style="padding:12px 0 0">
+                <b style="color:var(--tx)">No other claims yet</b><br>Claims you submit will appear
+                here.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="v" id="v-admin">
+          <div class="stats">
+            <div class="card stat"><b>248</b><span>Total items</span></div>
+            <div class="card stat"><b>1,031</b><span>Users</span></div>
+            <div class="card stat"><b>14</b><span>Claims to review</span></div>
+            <div class="card stat"><b>73</b><span>Matched</span></div>
+            <div class="card stat"><b>162</b><span>Returned</span></div>
+          </div>
+          <div class="card">
+            <div class="bar" style="margin-bottom:12px">
+              <h3>Claim verification</h3>
+              <input class="in sp" style="max-width:240px" id="aq" placeholder="Search claims" aria-label="Search claims" oninput="adm()">
+              <select class="in" style="max-width:160px" id="as" aria-label="Filter status" onchange="adm()">
+                <option value="">All statuses</option>
+                <option>Pending</option>
+                <option>Approved</option>
+                <option>Rejected</option>
+              </select>
+            </div>
+            <div class="tw">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Claim</th>
+                    <th>Item</th>
+                    <th>Claimant</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="at"></tbody>
+              </table>
+            </div>
+            <div class="bar" style="margin:12px 0 0">
+              <span class="sm mu">Showing 1–4 of 14</span>
+              <span class="sp" style="display:flex;gap:8px"><button class="btn out" disabled>Previous</button><button class="btn out">Next</button></span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <dialog id="dg">
+    <h3 id="dt"></h3>
+    <p class="mu" id="dp"></p>
+    <div style="display:flex;gap:10px;justify-content:flex-end">
+      <button class="btn out" onclick="dg.close()">Cancel</button>
+      <button class="btn pri" id="dok">Confirm</button>
+    </div>
+  </dialog>
+  <div class="toast" id="toast" role="status"></div>
+
+    <script src="script.js">
+  </script>
+</body>
+</html>
+
+
+
+
+
+:root {
+      --navy: #1e2a6b;
+      --navy2: #2b3a8f;
+      --teal: #0f9d8a;
+      --tealbg: #dff5f1;
+      --bg: #f5f6fa;
+      --card: #fff;
+      --line: #e3e6ef;
+      --tx: #151a33;
+      --mu: #5b6384;
+      --warn: #b45309;
+      --warnbg: #fef3c7;
+      --bad: #b91c1c;
+      --badbg: #fee2e2;
+      --blue: #1d4ed8;
+      --bluebg: #dbeafe;
+      --ok: #047857;
+      --okbg: #d1fae5;
+      --sh: 0 1px 2px rgba(20, 28, 70, .06), 0 4px 14px rgba(20, 28, 70, .06);
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme=light]) {
+        --navy: #8da0ff;
+        --navy2: #a9b8ff;
+        --teal: #34d3bd;
+        --tealbg: #0d3b36;
+        --bg: #0f1224;
+        --card: #171b35;
+        --line: #2a2f52;
+        --tx: #eceefb;
+        --mu: #a2a9cb;
+        --warn: #fbbf24;
+        --warnbg: #3a2c0b;
+        --bad: #fca5a5;
+        --badbg: #431616;
+        --blue: #93c5fd;
+        --bluebg: #172554;
+        --ok: #6ee7b7;
+        --okbg: #0b3a2c;
+        --sh: none;
+      }
+    }
+    :root[data-theme=dark] {
+      --navy: #8da0ff;
+      --navy2: #a9b8ff;
+      --teal: #34d3bd;
+      --tealbg: #0d3b36;
+      --bg: #0f1224;
+      --card: #171b35;
+      --line: #2a2f52;
+      --tx: #eceefb;
+      --mu: #a2a9cb;
+      --warn: #fbbf24;
+      --warnbg: #3a2c0b;
+      --bad: #fca5a5;
+      --badbg: #431616;
+      --blue: #93c5fd;
+      --bluebg: #172554;
+      --ok: #6ee7b7;
+      --okbg: #0b3a2c;
+      --sh: none;
+    }
+    html {
+      height: 100%;
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--tx);
+      font: 16px/1.55 "Plus Jakarta Sans", Inter, system-ui, sans-serif;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+    :focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+      margin: 0;
+      letter-spacing: -.02em;
+    }
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.4rem);
+      font-weight: 800;
+    }
+    h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+    .wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .mu {
+      color: var(--mu);
+    }
+    .sm {
+      font-size: .875rem;
+    }
+    svg.i {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: none;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      padding: 11px 18px;
+      font: 600 .95rem inherit;
+      font-family: inherit;
+      cursor: pointer;
+      transition: .15s;
+      min-height: 44px;
+    }
+    .pri {
+      background: var(--navy);
+      color: #fff;
+    }
+    .pri:hover {
+      filter: brightness(1.15);
+    }
+    :root[data-theme=dark] .pri,
+    .dk .pri {
+      color: #0f1224;
+    }
+    .acc {
+      background: var(--teal);
+      color: #fff;
+    }
+    .acc:hover {
+      filter: brightness(1.08);
+    }
+    .out {
+      background: var(--card);
+      border-color: var(--line);
+      color: var(--tx);
+    }
+    .out:hover {
+      border-color: var(--navy);
+    }
+    .dng {
+      background: var(--badbg);
+      color: var(--bad);
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      box-shadow: var(--sh);
+      padding: 24px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 99px;
+      padding: 2px 10px;
+      font-size: .78rem;
+      font-weight: 600;
+    }
+    .badge::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+    .b-lost {
+      background: var(--badbg);
+      color: var(--bad);
+    }
+    .b-found {
+      background: var(--okbg);
+      color: var(--ok);
+    }
+    .b-pend {
+      background: var(--warnbg);
+      color: var(--warn);
+    }
+    .b-match {
+      background: var(--bluebg);
+      color: var(--blue);
+    }
+    .b-ret {
+      background: var(--tealbg);
+      color: var(--teal);
+    }
+
+    /* nav */
+    .top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 90%, transparent);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .top .wrap {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      height: 64px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--navy);
+    }
+    .mark {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: var(--navy);
+      display: grid;
+      place-items: center;
+      color: #fff;
+    }
+    .links {
+      display: flex;
+      gap: 22px;
+      margin-left: auto;
+      font-weight: 500;
+      font-size: .92rem;
+    }
+    .links a:hover {
+      color: var(--teal);
+    }
+    .sp {
+      margin-left: auto;
+    }
+    @media (max-width: 760px) {
+      .links a.h {
+        display: none;
+      }
+    }
+
+    /* hero */
+    .hero {
+      padding: 56px 0 40px;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .hero p.lead {
+      font-size: 1.1rem;
+      color: var(--mu);
+      max-width: 520px;
+      margin: 18px 0 24px;
+    }
+    .cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .search {
+      display: flex;
+      gap: 8px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 8px;
+      box-shadow: var(--sh);
+      max-width: 560px;
+    }
+    .search input {
+      flex: 1;
+      border: 0;
+      background: none;
+      font: inherit;
+      color: var(--tx);
+      padding: 0 8px;
+      min-width: 0;
+    }
+    .search input:focus {
+      outline: 0;
+    }
+    .search:focus-within {
+      border-color: var(--teal);
+    }
+    .trail {
+      display: grid;
+      gap: 0;
+    }
+    .trail .row {
+      display: flex;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--line);
+      align-items: center;
+    }
+    .trail .row:last-child {
+      border: 0;
+    }
+    .dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: var(--tealbg);
+      color: var(--teal);
+      flex: none;
+    }
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        padding-top: 32px;
+      }
+    }
+    section.s {
+      padding: 48px 0;
+    }
+    .g3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .g4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    @media (max-width: 860px) {
+      .g3,
+      .g4 {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    @media (max-width: 560px) {
+      .g3,
+      .g4 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ic {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--tealbg);
+      color: var(--teal);
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+    }
+    .step {
+      border-top: 3px solid var(--teal);
+      padding-top: 14px;
+    }
+    .step b {
+      display: block;
+      font-size: 1.05rem;
+    }
+    .thumb {
+      height: 130px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--tealbg), var(--bluebg));
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .thumb svg {
+      width: 42px;
+      height: 42px;
+    }
+    .meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: var(--mu);
+      font-size: .85rem;
+      margin: 6px 0 12px;
+    }
+    .meta span {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+    }
+    .meta svg {
+      width: 14px;
+      height: 14px;
+    }
+    .trust {
+      background: var(--navy);
+      color: #fff;
+      border-radius: 20px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    :root[data-theme=dark] .trust {
+      background: #1d2352;
+      color: #eceefb;
+    }
+    .trust ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+    .trust li {
+      display: flex;
+      gap: 12px;
+    }
+    .trust li svg {
+      color: #5eead4;
+      margin-top: 2px;
+    }
+    @media (max-width: 760px) {
+      .trust {
+        grid-template-columns: 1fr;
+        padding: 24px;
+      }
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 32px 0;
+      margin-top: 32px;
+      color: var(--mu);
+      font-size: .9rem;
+    }
+    footer .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* auth */
+    .auth {
+      min-height: calc(100vh - 64px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .side {
+      background: var(--navy);
+      color: #fff;
+      padding: 56px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+    :root[data-theme=dark] .side {
+      background: #1d2352;
+      color: #eceefb;
+    }
+    .side h2 {
+      font-size: 2.3rem;
+    }
+    .side p {
+      opacity: .85;
+      max-width: 420px;
+    }
+    .form {
+      padding: 40px 20px;
+      display: grid;
+      place-items: center;
+    }
+    .form .card {
+      width: 100%;
+      max-width: 520px;
+    }
+    @media (max-width: 860px) {
+      .auth {
+        grid-template-columns: 1fr;
+      }
+      .side {
+        display: none;
+      }
+    }
+    label {
+      display: block;
+      font-weight: 600;
+      font-size: .88rem;
+      margin-bottom: 6px;
+    }
+    .f {
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .in {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      color: var(--tx);
+      border-radius: 10px;
+      padding: 11px 12px;
+      font: inherit;
+      min-height: 44px;
+    }
+    .in:focus {
+      outline: 3px solid color-mix(in srgb, var(--teal) 40%, transparent);
+      border-color: var(--teal);
+    }
+    .in.err {
+      border-color: var(--bad);
+    }
+    .er {
+      color: var(--bad);
+      font-size: .82rem;
+      margin-top: 4px;
+      display: none;
+    }
+    .er.on {
+      display: block;
+    }
+    .eye {
+      position: absolute;
+      right: 6px;
+      top: 30px;
+      background: none;
+      border: 0;
+      color: var(--mu);
+      padding: 8px;
+      cursor: pointer;
+    }
+    .two {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 16px;
+    }
+    @media (max-width: 600px) {
+      .two {
+        grid-template-columns: 1fr;
+      }
+    }
+    .sec {
+      font-weight: 700;
+      font-size: .95rem;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 6px;
+      margin: 22px 0 14px;
+      color: var(--navy);
+    }
+    .chk {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-size: .9rem;
+      margin-bottom: 14px;
+    }
+    .chk input {
+      margin-top: 4px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--teal);
+    }
+    .drop {
+      border: 2px dashed var(--line);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      color: var(--mu);
+      font-size: .9rem;
+      cursor: pointer;
+      display: block;
+      font-weight: 400;
+    }
+    .drop:hover {
+      border-color: var(--teal);
+    }
+
+    /* app */
+    .app {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      min-height: 100vh;
+    }
+    .nav {
+      background: var(--card);
+      border-right: 1px solid var(--line);
+      padding: 20px 14px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      overflow: auto;
+    }
+    .nav .logo {
+      padding: 0 8px 18px;
+    }
+    .nav a {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: .93rem;
+      color: var(--mu);
+    }
+    .nav a:hover {
+      background: var(--bg);
+      color: var(--tx);
+    }
+    .nav a.on {
+      background: var(--tealbg);
+      color: var(--teal);
+      font-weight: 700;
+    }
+    .nav .gap {
+      flex: 1;
+    }
+    .main {
+      padding: 28px;
+      min-width: 0;
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .bar .sp {
+      margin-left: auto;
+    }
+    .mb {
+      display: none;
+    }
+    @media (max-width: 900px) {
+      .app {
+        grid-template-columns: 1fr;
+      }
+      .nav {
+        position: fixed;
+        z-index: 40;
+        width: 260px;
+        transform: translateX(-100%);
+        transition: .2s;
+        box-shadow: 0 0 40px rgba(0, 0, 0, .3);
+      }
+      .nav.open {
+        transform: none;
+      }
+      .mb {
+        display: inline-flex;
+      }
+      .main {
+        padding: 18px;
+      }
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 1100px) {
+      .stats {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .stat {
+      padding: 16px;
+    }
+    .stat b {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+    .stat span {
+      font-size: .82rem;
+      color: var(--mu);
+    }
+    .tw {
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .9rem;
+    }
+    th {
+      text-align: left;
+      color: var(--mu);
+      font-weight: 600;
+      font-size: .8rem;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    td {
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    tr:last-child td {
+      border: 0;
+    }
+    .two2 {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 20px;
+    }
+    @media (max-width: 1000px) {
+      .two2 {
+        grid-template-columns: 1fr;
+      }
+    }
+    .act {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      font-size: .9rem;
+    }
+    .act .dot {
+      width: 32px;
+      height: 32px;
+    }
+    .empty {
+      text-align: center;
+      padding: 28px;
+      color: var(--mu);
+    }
+    .prog {
+      display: flex;
+      gap: 0;
+      margin: 8px 0 4px;
+    }
+    .prog div {
+      flex: 1;
+      text-align: center;
+      font-size: .8rem;
+      color: var(--mu);
+      position: relative;
+      padding-top: 26px;
+    }
+    .prog div::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      margin-left: -8px;
+      border-radius: 50%;
+      background: var(--line);
+      z-index: 1;
+    }
+    .prog div::after {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: -50%;
+      width: 100%;
+      height: 3px;
+      background: var(--line);
+    }
+    .prog div:first-child::after {
+      display: none;
+    }
+    .prog .d {
+      color: var(--tx);
+      font-weight: 600;
+    }
+    .prog .d::before,
+    .prog .d::after {
+      background: var(--teal);
+    }
+    .filters {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: 800px) {
+      .filters {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    dialog {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      background: var(--card);
+      color: var(--tx);
+      max-width: 420px;
+      width: calc(100% - 32px);
+      padding: 24px;
+    }
+    dialog::backdrop {
+      background: rgba(10, 14, 40, .55);
+    }
+    .toast {
+      position: fixed;
+      bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      color: #fff;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 600;
+      z-index: 99;
+      display: none;
+    }
+    :root[data-theme=dark] .toast {
+      color: #0f1224;
+    }
+    .toast.on {
+      display: block;
+    }
+    .page {
+      display: none;
+    }
+    .page.on {
+      display: block;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+
+
+
+
+
+"use strict";
+
+/* ---------- Query selector shortcut ---------- */
+
+var $ = function (selector) {
+    return document.querySelector(selector);
+};
+
+/* ---------- SVG icon helper ---------- */
+
+var I = function (name) {
+    return '<svg class="i"><use href="#' + name + '"/></svg>';
+};
+
+/* ---------- Sample data ---------- */
+
+var DATA = [
+    ["Black wallet", "Lost", "Near library", "Sept 10, 2026", "b-lost"],
+    ["Key chain with blue tag", "Found", "Near cafeteria", "Sept 9, 2026", "b-found"],
+    ["Wireless headphones", "Found", "Gym entrance", "Sept 8, 2026", "b-found"],
+    ["Student ID holder", "Lost", "Main gate", "Sept 7, 2026", "b-lost"],
+    ["Silver water bottle", "Found", "Room 204", "Sept 6, 2026", "b-found"],
+    ["Grey backpack", "Lost", "Bus terminal", "Sept 5, 2026", "b-lost"]
+];
+
+var CL = [
+    ["C-1042", "Black wallet", "Ana Reyes", "Pending"],
+    ["C-1041", "Blue key chain", "Mark Santos", "Approved"],
+    ["C-1039", "Grey backpack", "Lia Cruz", "Rejected"],
+    ["C-1038", "Water bottle", "Jun Dela Cruz", "Pending"]
+];
+
+var BC = {
+    Pending: "b-pend",
+    Approved: "b-ret",
+    Rejected: "b-lost"
+};
+
+var NAV = {
+    user: [
+        ["dashboard", "grid", "Dashboard"],
+        ["report", "plus", "Report lost item"],
+        ["report", "box", "Report found item"],
+        ["search", "file", "My reports"],
+        ["search", "link", "Possible matches"],
+        ["claims", "shield", "My claims"],
+        ["dashboard", "msg", "Messages"],
+        ["dashboard", "cog", "Account settings"]
+    ],
+    admin: [
+        ["admin", "grid", "Overview"],
+        ["admin", "box", "Items"],
+        ["admin", "users", "Users"],
+        ["admin", "shield", "Claims"],
+        ["admin", "file", "Report status"]
+    ]
+};
+
+var T = {
+    dashboard: [
+        "Welcome back, Jeo Ong",
+        "Here’s what’s happening with your reports.",
+        '<a class="btn acc" href="#report">' + I("plus") + "Report item</a>"
+    ],
+    report: [
+        "Report an item",
+        "Share clear details so the right person can recognize it.",
+        ""
+    ],
+    search: [
+        "Search items",
+        "Filter by keyword, status, category or date.",
+        ""
+    ],
+    claims: [
+        "Submit a claim",
+        "Provide evidence so an administrator can verify ownership.",
+        ""
+    ],
+    admin: [
+        "Administrator dashboard",
+        "Review claims and manage reports.",
+        ""
+    ]
+};
+
+var APP = ["dashboard", "report", "search", "claims", "admin"];
+
+/* ---------- Item cards and search ---------- */
+
+function card(d) {
+    return (
+        '<article class="card">' +
+            '<div class="thumb">' + I("box") + "</div>" +
+            '<div style="display:flex;justify-content:space-between;gap:8px">' +
+                "<h3>" + d[0] + "</h3>" +
+                '<span class="badge ' + d[4] + '">' + d[1] + "</span>" +
+            "</div>" +
+            '<div class="meta">' +
+                "<span>" + I("pin") + d[2] + "</span>" +
+                "<span>" + I("cal") + d[3] + "</span>" +
+            "</div>" +
+            '<a class="btn out" style="width:100%" href="#claims">View details</a>' +
+        "</article>"
+    );
+}
+
+function items() {
+    var keyword = ($("#kw") || { value: "" }).value.toLowerCase();
+    var status = ($("#fs") || { value: "" }).value;
+    var results = DATA.filter(function (d) {
+        var matchesKeyword = !keyword ||
+            (d[0] + " " + d[2]).toLowerCase().includes(keyword);
+        var matchesStatus = !status || d[1] === status;
+        return matchesKeyword && matchesStatus;
+    });
+
+    var resultsContainer = $("#sr");
+
+    if (!resultsContainer) return;
+
+    resultsContainer.innerHTML = results.length
+        ? results.map(card).join("")
+        : '<div class="card empty" style="grid-column:1/-1">' +
+            '<b style="color:var(--tx)">No items match your search</b><br>' +
+            "Try fewer keywords or clear the filters." +
+          "</div>";
+}
+
+function renderRecentItems() {
+    document.querySelectorAll(".items:not(#sr)").forEach(function (el) {
+        el.innerHTML = DATA.slice(0, 3).map(card).join("");
+    });
+}
+
+/* ---------- Admin claim verification ---------- */
+
+function adm() {
+    var queryInput = $("#aq");
+    var statusInput = $("#as");
+    var tableBody = $("#at");
+
+    if (!queryInput || !statusInput || !tableBody) return;
+
+    var query = queryInput.value.toLowerCase();
+    var status = statusInput.value;
+
+    var rows = CL.filter(function (c) {
+        var matchesStatus = !status || c[3] === status;
+        var matchesQuery = c.join(" ").toLowerCase().includes(query);
+        return matchesStatus && matchesQuery;
+    }).map(function (c) {
+        var actions = c[3] === "Pending"
+            ? '<button class="btn out" type="button" ' +
+                'style="min-height:36px;padding:6px 12px" ' +
+                'onclick="dlg(\'Approve claim ' + c[0] + '?\', ' +
+                '\'The claimant will be notified and the item moves to release.\', ' +
+                'function(){updateClaim(\'' + c[0] + '\', \'Approved\')})">' +
+                "Approve</button> " +
+
+              '<button class="btn dng" type="button" ' +
+                'style="min-height:36px;padding:6px 12px" ' +
+                'onclick="dlg(\'Reject claim ' + c[0] + '?\', ' +
+                '\'The claimant will be asked for stronger evidence.\', ' +
+                'function(){updateClaim(\'' + c[0] + '\', \'Rejected\')})">' +
+                "Reject</button>"
+            : '<span class="mu sm">Reviewed</span>';
+
+        return (
+            "<tr>" +
+                "<td>" + c[0] + "</td>" +
+                "<td>" + c[1] + "</td>" +
+                "<td>" + c[2] + "</td>" +
+                '<td><span class="badge ' + BC[c[3]] + '">' +
+                    c[3] + "</span></td>" +
+                "<td>" + actions + "</td>" +
+            "</tr>"
+        );
+    });
+
+    tableBody.innerHTML = rows.join("") ||
+        '<tr><td colspan="5" class="empty">No claims match.</td></tr>';
+}
+
+function updateClaim(claimId, newStatus) {
+    var claim = CL.find(function (c) {
+        return c[0] === claimId;
+    });
+
+    if (!claim) return;
+
+    claim[3] = newStatus;
+    adm();
+    toast("Claim " + newStatus.toLowerCase());
+}
+
+/* ---------- UI utilities ---------- */
+
+function dlg(title, message, onConfirm) {
+    var dialog = $("#dg");
+    var titleElement = $("#dt");
+    var messageElement = $("#dp");
+    var confirmButton = $("#dok");
+
+    if (!dialog || !titleElement || !messageElement || !confirmButton) {
+        return;
+    }
+
+    titleElement.textContent = title;
+    messageElement.textContent = message;
+
+    confirmButton.onclick = function () {
+        dialog.close();
+        if (typeof onConfirm === "function") {
+            onConfirm();
+        }
+    };
+
+    if (typeof dialog.showModal === "function") {
+        dialog.showModal();
+    }
+}
+
+function toast(message) {
+    var el = $("#toast");
+    if (!el) return;
+
+    el.textContent = message;
+    el.classList.add("on");
+
+    setTimeout(function () {
+        el.classList.remove("on");
+    }, 2400);
+}
+
+function eye(id) {
+    var input = $("#" + id);
+    if (!input) return;
+
+    input.type = input.type === "password" ? "text" : "password";
+}
+
+function theme() {
+    var root = document.documentElement;
+    var currentTheme = root.dataset.theme || "light";
+    root.dataset.theme = currentTheme === "dark" ? "light" : "dark";
+}
+
+/* ---------- Form validation ---------- */
+
+function bad(field, isValid) {
+    if (!field) return false;
+
+    field.classList.toggle("err", !isValid);
+
+    var errorMessage = field.parentNode
+        ? field.parentNode.querySelector(".er")
+        : null;
+
+    if (errorMessage) {
+        errorMessage.classList.toggle("on", !isValid);
+    }
+
+    return isValid;
+}
+
+function val(form, rules) {
+    var allValid = true;
+
+    rules.forEach(function (rule) {
+        var field = $("#" + rule[0]);
+
+        if (!field || !bad(field, rule[1](field.value))) {
+            allValid = false;
+        }
+    });
+
+    return allValid;
+}
+
+var em = function (value) {
+    return /^\S+@\S+\.\S+$/.test(value);
+};
+
+var ne = function (value) {
+    return value.trim().length > 0;
+};
+
+/* ---------- Form handlers ---------- */
+
+function setupForms() {
+    var loginForm = $("#lf");
+
+    if (loginForm) {
+        loginForm.onsubmit = function (e) {
+            e.preventDefault();
+
+            var valid = val(null, [
+                ["le", em],
+                ["lp", function (v) {
+                    return v.length >= 8;
+                }]
+            ]);
+
+            if (valid) {
+                var button = $("#lb");
+
+                if (button) {
+                    button.textContent = "Logging in…";
+                    button.disabled = true;
+                }
+
+                setTimeout(function () {
+                    if (button) {
+                        button.textContent = "Log in";
+                        button.disabled = false;
+                    }
+                    go("dashboard");
+                }, 900);
+            }
+        };
+    }
+
+    var signupForm = $("#sf");
+
+    if (signupForm) {
+        signupForm.onsubmit = function (e) {
+            e.preventDefault();
+
+            var valid = val(null, [
+                ["sn", ne],
+                ["sc", function (v) {
+                    return v.replace(/\D/g, "").length >= 10;
+                }],
+                ["se", em],
+                ["sp", function (v) {
+                    return v.length >= 8;
+                }],
+                ["sq", function (v) {
+                    return v.length > 0 && v === ($("#sp") || {}).value;
+                }],
+                ["si", ne]
+            ]);
+
+            var terms = $("#sa");
+
+            if (valid && terms && !terms.checked) {
+                toast("Please accept the Terms to continue");
+                valid = false;
+            }
+
+            if (valid) {
+                toast("Account created");
+                go("dashboard");
+            }
+        };
+    }
+
+    var reportForm = $("#rf");
+
+    if (reportForm) {
+        reportForm.onsubmit = function (e) {
+            e.preventDefault();
+
+            if (val(null, [
+                ["rn", ne],
+                ["rd", ne],
+                ["rl", ne]
+            ])) {
+                toast("Report submitted");
+                go("dashboard");
+            }
+        };
+    }
+}
+
+/* ---------- Navigation ---------- */
+
+function renderNav(page) {
+    var navElement = $("#nav");
+    if (!navElement) return;
+
+    var links = NAV[page === "admin" ? "admin" : "user"];
+    var firstMatch = links.findIndex(function (link) {
+        return link[0] === page;
+    });
+
+    var linkHtml = links.map(function (link, index) {
+        var cls = index === firstMatch ? "on" : "";
+
+        return '<a href="#' + link[0] + '" class="' + cls + '">' +
+            I(link[1]) + link[2] + "</a>";
+    }).join("");
+
+    navElement.innerHTML =
+        '<a class="logo" href="#home"><span class="mark">' +
+        I("search") + "</span>HanapBalik" +
+        (page === "admin" ? " Admin" : "") + "</a>" +
+        linkHtml +
+        '<span class="gap"></span>' +
+        '<a href="#login">' + I("out") + "Log out</a>" +
+        '<button class="btn out" type="button" ' +
+        'onclick="theme()" style="margin-top:8px">' +
+        "Toggle theme</button>";
+
+    navElement.classList.remove("open");
+}
+
+function showAppView(page) {
+    var appPage = $("#p-app");
+    var view = $("#v-" + page);
+    var header = T[page];
+
+    if (!appPage || !view || !header) return;
+
+    appPage.classList.add("on");
+
+    document.querySelectorAll(".v").forEach(function (element) {
+        element.style.display = "none";
+    });
+
+    view.style.display = "block";
+
+    var title = $("#ttl");
+    var subtitle = $("#sub");
+    var quickAction = $("#qa");
+
+    if (title) title.textContent = header[0];
+    if (subtitle) subtitle.textContent = header[1];
+    if (quickAction) quickAction.innerHTML = header[2];
+
+    renderNav(page);
+
+    if (page === "search") items();
+    if (page === "admin") adm();
+}
+
+function route() {
+    var hash = (location.hash || "#home").slice(1);
+
+    if (["how", "safety", "about"].includes(hash)) {
+        go("home", hash);
+        return;
+    }
+
+    if (!["home", "login", "signup"].concat(APP).includes(hash)) {
+        hash = "home";
+    }
+
+    document.querySelectorAll(".page").forEach(function (page) {
+        page.classList.remove("on");
+    });
+
+    if (APP.includes(hash)) {
+        showAppView(hash);
+    } else {
+        var pageElement = $("#p-" + hash);
+        if (pageElement) pageElement.classList.add("on");
+    }
+
+    window.scrollTo(0, 0);
+}
+
+function go(page, section) {
+    if (section) {
+        document.querySelectorAll(".page").forEach(function (element) {
+            element.classList.remove("on");
+        });
+
+        var homePage = $("#p-home");
+        if (homePage) homePage.classList.add("on");
+
+        var target = document.getElementById(section);
+        if (target) target.scrollIntoView();
+
+        return;
+    }
+
+    location.hash = page;
+}
+
+/* ---------- Start the application ---------- */
+
+function init() {
+    renderRecentItems();
+    setupForms();
+
+    var navElement = $("#nav");
+
+    if (navElement) {
+        navElement.addEventListener("click", function () {
+            navElement.classList.remove("open");
+        });
+    }
+
+    window.addEventListener("hashchange", route);
+    route();
+
+    // Search and admin filters update as the user types or changes status.
+    var keywordInput = $("#kw");
+    var statusFilter = $("#fs");
+    var adminQuery = $("#aq");
+    var adminStatus = $("#as");
+
+    if (keywordInput) keywordInput.addEventListener("input", items);
+    if (statusFilter) statusFilter.addEventListener("change", items);
+    if (adminQuery) adminQuery.addEventListener("input", adm);
+    if (adminStatus) adminStatus.addEventListener("change", adm);
+}
+
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+} else {
+    init();
+}
+
+
+
+import os
+import uuid
+
+from flask import ( # type: ignore
+    Flask,
+    render_template,
+    request,
+    redirect,
+    url_for,
+    flash,
+    abort,
+    send_from_directory,
+)
+from flask_sqlalchemy import SQLAlchemy # type: ignore
+from flask_login import ( # type: ignore
+    LoginManager,
+    UserMixin,
+    login_user,
+    logout_user,
+    login_required,
+    current_user,
+)
+from werkzeug.security import generate_password_hash, check_password_hash  # type: ignore
+from werkzeug.utils import secure_filename # type: ignore
+
+
+# --------------------------------------------------
+# Configuration
+# --------------------------------------------------
+
+app = Flask(__name__)
+
+app.config["SECRET_KEY"] = os.environ.get(
+    "SECRET_KEY", "change-this-secret-key"
+)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///hanapbalik.db"
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+app.config["MAX_CONTENT_LENGTH"] = 5 * 1024 * 1024  # 5 MB
+
+# Uploaded ID files are stored outside the static folder.
+PRIVATE_ID_FOLDER = os.path.join(app.instance_path, "private_ids")
+os.makedirs(PRIVATE_ID_FOLDER, exist_ok=True)
+
+ALLOWED_EXTENSIONS = {"png", "jpg", "jpeg", "pdf"}
+
+db = SQLAlchemy(app)
+
+login_manager = LoginManager()
+login_manager.init_app(app)
+login_manager.login_view = "login"
+login_manager.login_message = "Please log in to continue."
+login_manager.login_message_category = "warning"
+
+
+# --------------------------------------------------
+# Database Models
+# --------------------------------------------------
+
+class User(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    full_name = db.Column(db.String(150), nullable=False)
+    contact_number = db.Column(db.String(30))
+    email = db.Column(db.String(150), unique=True, nullable=False)
+    password_hash = db.Column(db.String(256), nullable=False)
+
+    id_type = db.Column(db.String(100))
+    id_number = db.Column(db.String(100))
+    id_file_path = db.Column(db.String(255))
+
+    is_verified = db.Column(db.Boolean, default=False)
+    is_admin = db.Column(db.Boolean, default=False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+
+class Item(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(150), nullable=False)
+    description = db.Column(db.Text, nullable=False)
+    location = db.Column(db.String(200), nullable=False)
+
+    # Values should be "Lost" or "Found".
+    report_type = db.Column(db.String(20), nullable=False)
+    status = db.Column(db.String(30), default="Open")
+
+    date_reported = db.Column(
+        db.DateTime,
+        server_default=db.func.current_timestamp(),
+    )
+
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
+    user = db.relationship("User", backref=db.backref("items", lazy=True))
+
+
+
+	import os
+
+class Config:
+    SECRET_KEY = os.environ.get("SECRET_KEY", "change-this-secret-key")
+    SQLALCHEMY_DATABASE_URI = os.environ.get(
+        "DATABASE_URL",
+        "mysql+pymysql://root:@localhost/HanapBalik"
+    )
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+
+
+-- HanapBalik database (MySQL / MariaDB)
+-- Run once in MySQL Workbench or phpMyAdmin.
+CREATE DATABASE IF NOT EXISTS HanapBalik
+    CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE HanapBalik;
+
+CREATE TABLE IF NOT EXISTS categories (
+    category_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS locations (
+    location_id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL UNIQUE,
+    description VARCHAR(255)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS staff (
+    staff_id INT AUTO_INCREMENT PRIMARY KEY,
+    full_name VARCHAR(150) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    role VARCHAR(50) NOT NULL DEFAULT 'staff'
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS found_items (
+    found_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
+    description TEXT NOT NULL,
+    distinguishing VARCHAR(255),
+    found_location INT NOT NULL,
+    found_date DATE NOT NULL,
+    stored_at VARCHAR(150),
+    photo_url VARCHAR(255),
+    logged_by INT NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'stored',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(category_id),
+    FOREIGN KEY (found_location) REFERENCES locations(location_id),
+    FOREIGN KEY (logged_by) REFERENCES staff(staff_id)
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS lost_reports (
+    report_id INT AUTO_INCREMENT PRIMARY KEY,
+    category_id INT NOT NULL,
+    description TEXT NOT NULL,
+    last_seen_loc INT NOT NULL,
+    lost_date DATE NOT NULL,
+    reporter_name VARCHAR(150) NOT NULL,
+    reporter_email VARCHAR(150) NOT NULL,
+    reporter_phone VARCHAR(30),
+    status VARCHAR(20) NOT NULL DEFAULT 'report',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (category_id) REFERENCES categories(category_id),
+    FOREIGN KEY (last_seen_loc) REFERENCES locations(location_id)
+) ENGINE=InnoDB;
+
+
+INSERT IGNORE INTO locations (name, description) VALUES
+('Library', 'School library'),
+('Main Gate', 'Main entrance of the school'),
+('Guidance Office', 'School guidance office'),
+('Cafeteria', 'School cafeteria'),
+('Computer Laboratory', 'School computer lab'),
+('Gymnasium', 'School sports area'),
+('Classroom 101', 'First-floor classroom');
+
+
+-- Sample records: run this section only once.
+INSERT INTO found_items
+(category_id, description, distinguishing, found_location, found_date,
+ stored_at, photo_url, logged_by, status)
+VALUES
+(1, 'Black smartphone', 'K-pop phone case', 1, '2026-10-25',
+ 'Security Office Shelf A', NULL, 1, 'stored'),
+(2, 'Blue notebook', 'Name written on the first page', 2, '2026-10-26',
+ 'Lost and Found Box 1', NULL, 1, 'stored'),
+(3, 'Blue bag', 'Contains a school ID', 4, '2026-10-27',
+ 'Security Office Shelf B', NULL, 2, 'stored');
+
+INSERT INTO lost_reports
+(category_id, description, last_seen_loc, lost_date, reporter_name,
+ reporter_email, reporter_phone, status)
+VALUES
+(1, 'Lost a black smartphone', 1, '2026-10-25',
+ 'Uchiha Sasuke', 'sasuke@gmail.com', '09171234567', 'report'),
+(2, 'Lost a blue notebook', 2, '2026-10-26',
+ 'Sage Han', 'sageisla@gmail.com', '09181234567', 'report');
+
+SELECT * FROM categories;
+SELECT * FROM locations;
+SELECT * FROM staff;
+SELECT * FROM found_items;
+SELECT * FROM lost_reports;
